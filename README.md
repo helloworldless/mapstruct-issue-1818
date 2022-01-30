@@ -14,7 +14,11 @@ Internal error in the mapping processor: java.lang.RuntimeException: javax.annot
 
 1 error
 
-## Workarounds
+## Resolution
 
-- Remove Netflix DGS dependencies (codegen plugin and graphql-dgs-spring-boot-starter)
-- Run clean first, e.g. `./gradlew clean assemble
+Upgrade com.netflix.dgs.codegen plugin to version 5.1.16+. 
+
+See here: [Use more specific output directory to avoid conflicts between output directories with other code generating tools (mapstruts) #310
+    ](https://github.com/Netflix/dgs-codegen/pull/310)
+
+You can also run clean first, e.g. `./gradlew clean assemble
